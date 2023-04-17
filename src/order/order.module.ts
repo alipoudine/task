@@ -3,7 +3,8 @@ import { VendingMachineModule } from 'src/vending-machine/vending-machine.module
 import { OrderService } from './order.service';
 
 @Module({
-  providers: [OrderService],
   imports: [VendingMachineModule],
+  providers: [OrderService],
+  exports: [OrderService],
 })
 export class OrderModule {}
